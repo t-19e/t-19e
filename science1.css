@@ -1,0 +1,50 @@
+@charset="UTF-8"
+<style>
+body{
+	text-align: center;
+}
+.circle{
+	 height: 100px;
+  width: 90%;
+  background-image: radial-gradient(farthest-side, rgba(14, 244, 255, 0.56) 17%, rgba(65, 164, 253, 0) 89%);
+}
+
+.heading-13 {
+	text-align: center;
+    position: relative;
+    color: #333333;
+    -webkit-box-reflect: below -10px -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .5));
+}
+
+.cstm-box-bracket {
+   --border-color: black; /* カッコの色 */
+   margin: 0 auto 2em; /* 外側の余白（上下と中央配置） */
+   padding: 2em; /* 内側余白 */
+   position: relative; /* 相対位置指定（擬似要素の基準） */
+}
+
+.cstm-box-bracket::before,
+.cstm-box-bracket::after {
+   content: ''; /* 擬似要素の内容なし */
+   width: 20px; /* カッコの幅 */
+   height: 30px; /* カッコの高さ */
+   position: absolute; /* 絶対位置指定 */
+}
+
+.cstm-box-bracket::before {
+   border-left: 1px solid var(--border-color); /* 左上のカッコ線 */
+   border-top: 1px solid var(--border-color); /* 上部線 */
+   top: 0; /* 上端に配置 */
+   left: 0; /* 左端に配置 */
+}
+
+.cstm-box-bracket::after {
+   border-right: 1px solid var(--border-color); /* 右下のカッコ線 */
+   border-bottom: 1px solid var(--border-color); /* 下部線 */
+   bottom: 0; /* 下端に配置 */
+   right: 0; /* 右端に配置 */
+}
+
+/* pタグの余白 */
+.cstm-box-bracket p { margin:0; }
+</style>
